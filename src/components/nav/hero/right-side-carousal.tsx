@@ -24,7 +24,7 @@ export function RightSide() {
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent>
+      <CarouselContent className="shadow-lg ">
         <CarouselItem>
             <RightChartOne />
         </CarouselItem>

@@ -39,7 +39,7 @@ const chartConfig = {
 
 export function RightChartOne() {
   return (
-    <Card className="dark:bg-zinc-900 bg-primary/5">
+    <Card className="dark:bg-black bg-primary/5">
       <CardHeader>
         <CardTitle>Area Chart - Gradient</CardTitle>
         <CardDescription>

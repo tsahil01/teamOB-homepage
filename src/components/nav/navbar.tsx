@@ -99,8 +99,8 @@ export function Navbar() {
             </div>
 
             <div className="flex flex-row justify-end gap-2">
-                <Button variant={"default"} size={"lg"} className="flex flex-row gap-2 bg-blue-800">
-                    <div>Get Started</div>
+                <Button variant={"default"} size={"lg"} className="flex-row gap-2 bg-blue-600 hidden md:flex text-white">
+                    <div className="text-white">Get Started</div>
                     <MoveRight size={16} />
                 </Button>
                 <ThemeModeToggle />
