@@ -8,6 +8,7 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import { ThemeModeToggle } from "../mode-toggle";
 
 
 const navElements = [
@@ -74,8 +75,8 @@ export function Navbar() {
         <nav className="flex flex-row justify-between p-4 rounded-2xl border bg-primary/5 shadow-lg sticky top-0 z-50">
             <div className="flex flex-row justify-start gap-4">
                 <div className="flex items-center gap-2">
-                    <AlarmClockCheck className="h-8 w-8 text-primary text-blue-800" />
-                    <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                    <AlarmClockCheck className="h-8 w-8 text-blue-600" />
+                    <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                         TeamOB
                     </span>
                 </div>
@@ -102,6 +103,7 @@ export function Navbar() {
                     <div>Get Started</div>
                     <MoveRight size={16} />
                 </Button>
+                <ThemeModeToggle />
             </div>
         </nav>
     </>

@@ -1,14 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Home } from "./components/HomePage"
+import { ThemeProvider } from "./components/theme-provider"
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
