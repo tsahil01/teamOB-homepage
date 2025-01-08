@@ -1,5 +1,11 @@
+import { Navbar } from "./nav/navbar";
+
 export function Home() {
     return <>
-    <h1 className="text-4xl" >Hello</h1>
+        <div className="flex flex-col h-screen w-screen">
+            <main className="flex flex-col container mx-auto mt-9">
+                <Navbar/>
+            </main>
+        </div>
     </>
 }
