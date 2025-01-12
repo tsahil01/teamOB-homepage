@@ -1,6 +1,5 @@
 
 import { RightChartThree } from "./right-chart-three";
-import { RightSide } from "./right-side-carousal";
 
 export function HeroSection() {
     return <>
