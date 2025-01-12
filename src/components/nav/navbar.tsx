@@ -7,9 +7,8 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 import { ThemeModeToggle } from "../mode-toggle";
-
 
 const navElements = [
     {
@@ -55,7 +54,7 @@ const navElements = [
     {
         title: "About us",
     }
-]
+];
 
 function ListItem({ title, description, href }: { title: string, description: string, href?: string }) {
     return <li>
@@ -68,25 +67,25 @@ function ListItem({ title, description, href }: { title: string, description: st
             </a>
         </NavigationMenuLink>
     </li>
-}
+};
 
 export function Navbar() {
-    return <>
-        <nav className="flex flex-row justify-between p-4 rounded-2xl border bg-primary/5 shadow-lg top-0 z-50">
-            <div className="flex flex-row justify-start gap-4">
+    return (
+        <nav className="flex flex-col sm:flex-row justify-between p-4 rounded-2xl border bg-primary/5 shadow-lg top-0 z-50">
+            <div className="flex flex-row justify-start gap-4 w-full sm:w-auto">
                 <div className="flex items-center gap-2">
                     <AlarmClockCheck className="h-8 w-8 text-blue-600" />
                     <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                         TeamOB
                     </span>
                 </div>
-                <NavigationMenu>
+                <NavigationMenu className="w-full sm:w-auto">
                     <NavigationMenuList>
                         {navElements.map((element) => (
                             <NavigationMenuItem key={element.title}>
                                 <NavigationMenuTrigger className="bg-0">{element.title}</NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                    <ul className="grid w-full gap-3 p-4 sm:w-[300px] md:w-[500px] lg:w-[600px] sm:grid-cols-1 md:grid-cols-2">
                                         {element.items?.map((item) => (
                                             <ListItem key={item.title} {...item} />
                                         ))}
@@ -98,13 +97,13 @@ export function Navbar() {
                 </NavigationMenu>
             </div>
 
-            <div className="flex flex-row justify-end gap-2">
-                <Button variant={"default"} size={"lg"} className="flex-row gap-2 bg-blue-600 hidden md:flex text-white">
+            <div className="flex flex-row justify-between items-center gap-2 w-full sm:w-auto mt-4 sm:mt-0">
+                <Button variant={"default"} size={"lg"} className="flex-row gap-2 bg-blue-600 hidden sm:flex text-white">
                     <div className="text-white">Get Started</div>
                     <MoveRight size={16} />
                 </Button>
                 <ThemeModeToggle />
             </div>
         </nav>
-    </>
+    );
 }

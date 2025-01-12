@@ -1,4 +1,5 @@
 
+import { Something } from "./companies/companies-trust";
 import { Features } from "./features/feature-component";
 import { HeroSection } from "./hero/hero";
 import { Navbar } from "./nav/navbar";
@@ -10,6 +11,7 @@ export function Home() {
                 <Navbar />
                 <HeroSection />
                 <Features />
+                <Something />
             </main>
         </div>
     </>

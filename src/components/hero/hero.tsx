@@ -22,7 +22,7 @@ export function HeroSection() {
                 </div>
             </div>
 
-            <div className="flex-1 relative">
+            <div className="flex-1">
                 {/* <RightChart/> */}
                 <RightChartThree />
 

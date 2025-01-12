@@ -38,7 +38,7 @@ export function Features() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature) => (
-          <Card key={feature.title} className="border-2">
+          <Card key={feature.title} className="border-2 bg-base">
             <CardHeader>
               <feature.icon className="h-10 w-10 text-primary mb-4" />
               <CardTitle>{feature.title}</CardTitle>
