@@ -19,17 +19,17 @@ const navElements = [
             {
                 title: "Team Management",
                 description: "Streamline your team's workflow and boost productivity.",
-                href: "/solutions/team-management",
+                href: "#"
             },
             {
                 title: "Time Tracking",
                 description: "Track time efficiently across projects and teams.",
-                href: "/solutions/time-tracking",
+                href: "#"
             },
             {
                 title: "Resource Planning",
                 description: "Optimize resource allocation and project scheduling.",
-                href: "/solutions/resource-planning",
+                href: "#"
             }
         ]
     },
@@ -39,22 +39,23 @@ const navElements = [
             {
                 title: "Documentation",
                 description: "Detailed guides and API references.",
-                href: "/resources/docs",
+                href: "#"
             },
             {
                 title: "Case Studies",
                 description: "Real-world success stories from our clients.",
-                href: "/resources/case-studies",
+                href: "#"
             },
             {
                 title: "Support",
                 description: "Get help from our expert support team.",
-                href: "/resources/support",
+                href: "#"
             }
         ]
     },
     {
         title: "About us",
+        href: "#"
     }
 ];
 
