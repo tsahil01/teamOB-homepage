@@ -57,7 +57,7 @@ const content = [
 
 export function Something() {
     return (
-        <div className="container py-20 p-4 border-t-2">
+        <div className="container py-20 border-t-2">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight mb-4">
                     Powerful Workforce Solutions

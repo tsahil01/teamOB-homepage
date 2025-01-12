@@ -22,7 +22,7 @@ export function HeroSection() {
                 </div>
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 overflow-auto">
                 {/* <RightChart/> */}
                 <RightChartThree />
 
