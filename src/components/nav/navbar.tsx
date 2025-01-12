@@ -72,7 +72,7 @@ function ListItem({ title, description, href }: { title: string, description: st
 
 export function Navbar() {
     return <>
-        <nav className="flex flex-row justify-between p-4 rounded-2xl border bg-primary/5 shadow-lg sticky top-0 z-50">
+        <nav className="flex flex-row justify-between p-4 rounded-2xl border bg-primary/5 shadow-lg top-0 z-50">
             <div className="flex flex-row justify-start gap-4">
                 <div className="flex items-center gap-2">
                     <AlarmClockCheck className="h-8 w-8 text-blue-600" />
