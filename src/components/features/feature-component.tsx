@@ -26,7 +26,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="container py-20">
+    <section className="container py-20 p-4 border-t-2">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight mb-4">
           Tools to Empower Your Team

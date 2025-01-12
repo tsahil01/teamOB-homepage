@@ -39,7 +39,7 @@ const chartConfig = {
 
 export function RightChartTwo() {
   return (
-    <Card className="flex-col w-full h-full dark:bg-black bg-primary/5">
+    <Card className="flex-col w-full h-full bg-primary/5 z-10">
       <CardHeader>
         <CardTitle>Bar Chart - Multiple</CardTitle>
         <CardDescription>January - June 2024</CardDescription>

@@ -18,25 +18,25 @@ export function RightSide() {
   )
 
   return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="w-full"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
-      <CarouselContent className="shadow-lg ">
-        <CarouselItem>
-            <RightChartOne />
-        </CarouselItem>
-        <CarouselItem>
-            <RightChartTwo />
-        </CarouselItem>
-        <CarouselItem>
-            <RightChartThree />
-        </CarouselItem>
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    // <Carousel
+    //   plugins={[plugin.current]}
+    //   className="w-full"
+    //   onMouseEnter={plugin.current.stop}
+    //   onMouseLeave={plugin.current.reset}
+    // >
+    //   <CarouselContent className="shadow-lg ">
+    //     <CarouselItem>
+    //         <RightChartOne />
+    //     </CarouselItem>
+    //     <CarouselItem>
+    //         <RightChartTwo />
+    //     </CarouselItem>
+    //     <CarouselItem>
+    //         <RightChartThree />
+    //     </CarouselItem>
+    //   </CarouselContent>
+    //   <CarouselPrevious />
+    //   <CarouselNext />
+    // </Carousel>
   )
 }

@@ -1,4 +1,5 @@
 
+import { RightChartThree } from "./right-chart-three";
 import { RightSide } from "./right-side-carousal";
 
 export function HeroSection() {
@@ -24,11 +25,11 @@ export function HeroSection() {
 
             <div className="flex-1 relative">
                 {/* <RightChart/> */}
-                <RightSide />
+                <RightChartThree />
 
                 {/* Background Decorative Elements */}
-                <div className="absolute -z-10 top-0 right-0 w-72 h-72 dark:bg-green-950 rounded-full blur-3xl"></div>
-                <div className="absolute -z-10 bottom-0 left-0 w-72 h-72 dark:bg-blue-950 rounded-full blur-3xl"></div>
+                {/* <div className="absolute -z-10 top-0 right-0 w-72 h-72 dark:bg-green-950 rounded-full blur-3xl"></div>
+                <div className="absolute -z-10 bottom-0 left-0 w-72 h-72 dark:bg-blue-950 rounded-full blur-3xl"></div> */}
             </div>
         </div>
     </>
