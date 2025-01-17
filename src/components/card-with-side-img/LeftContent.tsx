@@ -1,4 +1,4 @@
-import { ArrowBigRight, CircleCheckBig, MoveRight } from "lucide-react";
+import {  CircleCheckBig, MoveRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 export function LeftContent() {
