@@ -1,4 +1,4 @@
-import { AlarmClockCheck, MoveRight, Menu } from 'lucide-react';
+import { AlarmClockCheck, MoveRight, Menu, KeySquare, BookOpen, Users } from 'lucide-react';
 import { Button } from "../ui/button";
 import {
     NavigationMenu,
@@ -15,6 +15,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navElements = [
     {
         title: "Solutions",
+        icon: KeySquare,
         items: [
             {
                 title: "Team Management",
@@ -35,6 +36,7 @@ const navElements = [
     },
     {
         title: "Resources",
+        icon: BookOpen,
         items: [
             {
                 title: "Documentation",
@@ -55,7 +57,24 @@ const navElements = [
     },
     {
         title: "About us",
-        href: "#"
+        icon: Users,
+        items: [
+            {
+                title: "Company",
+                description: "Learn more about our mission and values.",
+                href: "#"
+            },
+            {
+                title: "Careers",
+                description: "Join our team and help us build the future.",
+                href: "#"
+            },
+            {
+                title: "Contact",
+                description: "Get in touch with our sales and support teams.",
+                href: "#"
+            }
+        ],
     }
 ];
 
@@ -129,12 +148,20 @@ export function Navbar() {
                     <NavigationMenuList>
                         {navElements.map((element) => (
                             <NavigationMenuItem key={element.title}>
-                                <NavigationMenuTrigger className="bg-0">{element.title}</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="flex items-center gap-2 bg-base">
+                                    <element.icon className="h-5 w-5 text-blue-600" />
+                                    {element.title}
+                                </NavigationMenuTrigger>
                                 {element.items && (
                                     <NavigationMenuContent>
                                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
                                             {element.items.map((item) => (
-                                                <ListItem key={item.title} {...item} />
+                                                <ListItem
+                                                    key={item.title}
+                                                    title={item.title}
+                                                    description={item.description}
+                                                    href={item.href}
+                                                />
                                             ))}
                                         </ul>
                                     </NavigationMenuContent>
@@ -149,6 +176,7 @@ export function Navbar() {
                 </Button>
                 <ThemeModeToggle />
             </div>
+
         </nav>
     );
 }
