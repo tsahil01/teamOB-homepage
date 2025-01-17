@@ -4,6 +4,7 @@ import { Something } from "./companies/companies-trust";
 import { Features } from "./features/feature-component";
 import { HeroSection } from "./hero/hero";
 import { Navbar } from "./nav/navbar";
+import { Partners } from "./partners/main";
 
 export function Home() {
     return <>
@@ -11,6 +12,7 @@ export function Home() {
             <main className="flex flex-col mx-auto mt-9 px-3">
                 <Navbar />
                 <HeroSection />
+                <Partners />
                 <Features />
                 <CardWithImg />
                 <Something />
