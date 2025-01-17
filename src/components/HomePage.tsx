@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion";
 import { CardWithImg } from "./card-with-side-img/CardWithImg";
 import { Something } from "./companies/companies-trust";
 import { Features } from "./features/feature-component";
@@ -7,16 +7,23 @@ import { Navbar } from "./nav/navbar";
 import { Partners } from "./partners/main";
 
 export function Home() {
-    return <>
-        <div className="flex flex-col min-h-screen bg-primary/5 mx-auto">
-            <main className="flex flex-col mx-auto mt-9 px-3">
-                <Navbar />
-                <HeroSection />
-                <Partners />
-                <Features />
-                <CardWithImg />
-                <Something />
-            </main>
-        </div>
-    </>
+    return (
+        <>
+            <div className="flex flex-col min-h-screen bg-primary/5 mx-auto">
+                <motion.main 
+                    className="flex flex-col mx-auto mt-9 px-3" 
+                    initial={{ opacity: 0, y: 20 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    transition={{ duration: 0.5 }}
+                >
+                    <Navbar />
+                    <HeroSection />
+                    <Partners />
+                    <Features />
+                    <CardWithImg />
+                    <Something />
+                </motion.main>
+            </div>
+        </>
+    );
 }
