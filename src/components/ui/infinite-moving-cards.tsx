@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
             <img
               src={item.imgUrl}
               alt="logo"
-              className="object-contain w-full h-full rounded-full"
+              className="object-contain w-full h-full"
             />
           </li>
         ))}
