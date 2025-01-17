@@ -5,7 +5,7 @@ export function HeroSection() {
     return <>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 my-20 container mx-auto">
             <div className="flex-1 text-center lg:text-left">
-                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-gray-50 mb-6">
+                <h1 className="text-4xl lg:text-6xl font-bold text-blue-950 dark:text-gray-50 mb-6">
                     Smart Employee Monitoring
                     <span className="text-blue-600"> Solution</span>
                 </h1>

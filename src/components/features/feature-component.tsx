@@ -28,7 +28,7 @@ export function Features() {
   return (
     <section className="container py-20 p-4 border-t-2">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold tracking-tight mb-4">
+        <h2 className="text-blue-900 text-3xl font-bold tracking-tight mb-4">
           Tools to Empower Your Team
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -38,10 +38,10 @@ export function Features() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature) => (
-          <Card key={feature.title} className="border-2 bg-base">
+          <Card key={feature.title} className="bg-base">
             <CardHeader>
-              <feature.icon className="h-10 w-10 text-primary mb-4" />
-              <CardTitle>{feature.title}</CardTitle>
+              <feature.icon className="h-10 w-10 text-primary mb-4 text-blue-950" />
+              <CardTitle className="text-blue-900">{feature.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>{feature.description}</CardDescription>

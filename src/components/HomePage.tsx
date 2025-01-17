@@ -1,4 +1,5 @@
 
+import { CardWithImg } from "./card-with-side-img/CardWithImg";
 import { Something } from "./companies/companies-trust";
 import { Features } from "./features/feature-component";
 import { HeroSection } from "./hero/hero";
@@ -11,6 +12,7 @@ export function Home() {
                 <Navbar />
                 <HeroSection />
                 <Features />
+                <CardWithImg />
                 <Something />
             </main>
         </div>
