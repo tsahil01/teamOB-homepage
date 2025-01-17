@@ -1,6 +1,4 @@
 import {  CircleCheckBig, MoveRight } from "lucide-react";
-import { Button } from "../ui/button";
-
 export function LeftContent() {
   return (
     <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left space-y-6">
@@ -34,13 +32,12 @@ export function LeftContent() {
       
       {/* Call-to-Action Button */}
       <div className="mt-8">
-        <Button 
-          size="lg" 
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold transition-colors"
+        <button  
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold transition-colors rounded-lg flex flex-row"
         >
           Get Started
           <MoveRight className="w-6 h-6 ml-2" />
-        </Button>
+        </button>
       </div>
     </div>
   );
