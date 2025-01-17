@@ -5,7 +5,7 @@ import { Features } from "./features/feature-component";
 import { HeroSection } from "./hero/hero";
 import { Navbar } from "./nav/navbar";
 import { Partners } from "./partners/main";
-import { HeroSection2 } from "./hero/hero2";
+// import { HeroSection2 } from "./hero/hero2";
 
 export function Home() {
     return (
@@ -19,7 +19,7 @@ export function Home() {
                 >
                     <Navbar />
                     <HeroSection />
-                    <HeroSection2 />
+                    {/* <HeroSection2 /> */}
                     <Partners />
                     <Features />
                     <CardWithImg />
