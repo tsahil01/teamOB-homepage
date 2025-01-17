@@ -170,7 +170,7 @@ export function Navbar() {
                         ))}
                     </NavigationMenuList>
                 </NavigationMenu>
-                <Button variant={"default"} size={"lg"} className="flex-row gap-2 bg-blue-600 text-white">
+                <Button variant={"default"} size={"lg"} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold transition-colors">
                     <div className="text-white">Get Started</div>
                     <MoveRight size={16} />
                 </Button>

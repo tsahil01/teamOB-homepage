@@ -1,4 +1,4 @@
-import { CircleCheckBig } from "lucide-react";
+import { ArrowBigRight, CircleCheckBig } from "lucide-react";
 import { Button } from "../ui/button";
 
 export function LeftContent() {
@@ -21,6 +21,7 @@ export function LeftContent() {
           "Organize and manage your team.",
           "Human task management and automation.",
           "Document Processing with OCR",
+          "And much more...",
         ].map((text, index) => (
           <div key={index} className="flex items-center gap-3">
             <CircleCheckBig className="text-blue-600 w-7 h-7" />
@@ -33,9 +34,10 @@ export function LeftContent() {
       <div className="mt-8">
         <Button 
           size="lg" 
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold rounded-full shadow-md transition-transform transform hover:scale-105"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold transition-colors rounded-full"
         >
           Get Started
+          <ArrowBigRight className="w-6 h-6 ml-2" />
         </Button>
       </div>
     </div>

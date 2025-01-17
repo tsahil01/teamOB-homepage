@@ -6,7 +6,7 @@ export function CardWithImg() {
 
   return (
     <section className="container p-4 border-t-2">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+      <div className="flex flex-col lg:flex-row items-center justify-between flex-col-reverse gap-12 lg:gap-20">
         <LeftContent />
         <RightContent imgUrl={img} />
       </div>
