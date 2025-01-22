@@ -49,13 +49,13 @@ export function BeforeAfterCard() {
                                 <span className="text-2xl font-bold text-gray-800">Teamob.ai</span>
                             </div>
                             <CardTitle className="mb-2 text-2xl font-bold leading-tight text-gray-900">
-                                {data[0].before.title}
+                                {data[0].before?.title}
                             </CardTitle>
-                            <CardDescription className="text-base text-gray-600">{data[0].before.description}</CardDescription>
+                            <CardDescription className="text-base text-gray-600">{data[0].before?.description}</CardDescription>
                         </CardHeader>
                         <CardContent>
                             <ul className="space-y-3">
-                                {data[0].before.points.map((text, index) => (
+                                {data[0].before?.points.map((text, index) => (
                                     <motion.li
                                         key={index}
                                         initial={{ opacity: 0, x: -20 }}
@@ -85,12 +85,12 @@ export function BeforeAfterCard() {
                                 <Badge className="px-3 py-1 text-sm font-semibold bg-green-100 text-green-800">AFTER</Badge>
                                 <span className="text-2xl font-bold text-white">Teamob.ai</span>
                             </div>
-                            <CardTitle className="mb-2 text-2xl font-bold leading-tight text-white">{data[1].after.title}</CardTitle>
-                            <CardDescription className="text-base text-blue-200">{data[1].after.description}</CardDescription>
+                            <CardTitle className="mb-2 text-2xl font-bold leading-tight text-white">{data[1].after?.title}</CardTitle>
+                            <CardDescription className="text-base text-blue-200">{data[1].after?.description}</CardDescription>
                         </CardHeader>
                         <CardContent>
                             <ul className="space-y-3">
-                                {data[1].after.points.map((text, index) => (
+                                {data[1].after?.points.map((text, index) => (
                                     <motion.li
                                         key={index}
                                         initial={{ opacity: 0, x: -20 }}
