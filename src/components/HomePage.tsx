@@ -7,16 +7,17 @@ import { Navbar } from "./nav/navbar";
 import { Partners } from "./partners/main";
 import { BeforeAfterCard } from "./before-after-card/before-after-card";
 import { UserReviews } from "./user-reviews/userReviews";
+import { Footer } from "./footer/footer";
 // import { HeroSection2 } from "./hero/hero2";
 
 export function Home() {
     return (
         <>
             <div className="flex flex-col min-h-screen bg-primary/5 mx-auto">
-                <motion.main 
-                    className="flex flex-col mx-auto mt-9 px-3" 
-                    initial={{ opacity: 0, y: 20 }} 
-                    animate={{ opacity: 1, y: 0 }} 
+                <motion.main
+                    className="flex flex-col mx-auto mt-9 px-3"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     <Navbar />
@@ -29,6 +30,7 @@ export function Home() {
                     <UserReviews />
                     <Something />
                 </motion.main>
+                <Footer />
             </div>
         </>
     );
