@@ -6,6 +6,7 @@ import { HeroSection } from "./hero/hero";
 import { Navbar } from "./nav/navbar";
 import { Partners } from "./partners/main";
 import { BeforeAfterCard } from "./before-after-card/before-after-card";
+import { UserReviews } from "./user-reviews/userReviews";
 // import { HeroSection2 } from "./hero/hero2";
 
 export function Home() {
@@ -25,6 +26,7 @@ export function Home() {
                     <Features />
                     <CardWithImg />
                     <BeforeAfterCard />
+                    <UserReviews />
                     <Something />
                 </motion.main>
             </div>

@@ -46,7 +46,7 @@ export function BeforeAfterCard() {
                         <CardHeader className="pb-4">
                             <div className="flex items-center justify-between mb-4">
                                 <Badge className="px-3 py-1 text-sm font-semibold bg-red-100 text-red-800">BEFORE</Badge>
-                                <span className="text-2xl font-bold text-gray-800">Teamob.ai</span>
+                                <span className="text-2xl font-bold text-blue-900">Teamob.ai</span>
                             </div>
                             <CardTitle className="mb-2 text-2xl font-bold leading-tight text-gray-900">
                                 {data[0].before?.title}
