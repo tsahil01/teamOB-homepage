@@ -5,6 +5,7 @@ import { Features } from "./features/feature-component";
 import { HeroSection } from "./hero/hero";
 import { Navbar } from "./nav/navbar";
 import { Partners } from "./partners/main";
+import { BeforeAfterCard } from "./before-after-card/before-after-card";
 // import { HeroSection2 } from "./hero/hero2";
 
 export function Home() {
@@ -23,6 +24,7 @@ export function Home() {
                     <Partners />
                     <Features />
                     <CardWithImg />
+                    <BeforeAfterCard />
                     <Something />
                 </motion.main>
             </div>
