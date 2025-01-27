@@ -1,4 +1,4 @@
-import { AlarmClockCheck, MoveRight, Menu, KeySquare, BookOpen, Users } from 'lucide-react';
+import { AlarmClockCheck, MoveRight, Menu, KeySquare, BookOpen, Users, FileText, HelpCircle } from 'lucide-react'; // Add more icons as needed
 import { Button } from "../ui/button";
 import {
     NavigationMenu,
@@ -19,16 +19,19 @@ const navElements = [
         items: [
             {
                 title: "Team Management",
+                icon: FileText, // Add icon for the item
                 description: "Streamline your team's workflow and boost productivity.",
                 href: "#"
             },
             {
                 title: "Time Tracking",
+                icon: HelpCircle, // Add icon for the item
                 description: "Track time efficiently across projects and teams.",
                 href: "#"
             },
             {
                 title: "Resource Planning",
+                icon: FileText, // Add icon for the item
                 description: "Optimize resource allocation and project scheduling.",
                 href: "#"
             }
@@ -40,16 +43,19 @@ const navElements = [
         items: [
             {
                 title: "Documentation",
+                icon: FileText, // Add icon for the item
                 description: "Detailed guides and API references.",
                 href: "#"
             },
             {
                 title: "Case Studies",
+                icon: HelpCircle, // Add icon for the item
                 description: "Real-world success stories from our clients.",
                 href: "#"
             },
             {
                 title: "Support",
+                icon: HelpCircle, // Add icon for the item
                 description: "Get help from our expert support team.",
                 href: "#"
             }
@@ -61,16 +67,19 @@ const navElements = [
         items: [
             {
                 title: "Company",
+                icon: FileText, // Add icon for the item
                 description: "Learn more about our mission and values.",
                 href: "#"
             },
             {
                 title: "Careers",
+                icon: FileText, // Add icon for the item
                 description: "Join our team and help us build the future.",
                 href: "#"
             },
             {
                 title: "Contact",
+                icon: HelpCircle, // Add icon for the item
                 description: "Get in touch with our sales and support teams.",
                 href: "#"
             }
@@ -78,12 +87,15 @@ const navElements = [
     }
 ];
 
-function ListItem({ title, description, href }: { title: string, description: string, href?: string }) {
+function ListItem({ title, description, href, icon }: { title: string, description: string, href?: string, icon: JSX.Element }) {
     return (
         <li>
             <NavigationMenuLink asChild>
                 <a href={href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                    <div className="text-sm font-medium leading-none">{title}</div>
+                    <div className="flex items-center gap-2">
+                        {icon && <span className="h-4 w-4">{icon}</span>} {/* Render icon */}
+                        <div className="text-sm font-medium leading-none">{title}</div>
+                    </div>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                         {description}
                     </p>
@@ -97,7 +109,7 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="flex flex-col lg:flex-row justify-between p-4 rounded-2xl border bg-primary/5 shadow-lg top-0 z-50">
+        <nav className="flex flex-col lg:flex-row justify-between p-4 rounded-2xl bg-primary/5 shadow-lg top-0 z-50">
             <div className="flex flex-row justify-between items-center w-full lg:w-auto">
                 <div className="flex items-center gap-2">
                     <AlarmClockCheck className="h-8 w-8 text-blue-600" />
@@ -118,16 +130,20 @@ export function Navbar() {
                             <nav className="flex flex-col gap-4">
                                 {navElements.map((element) => (
                                     <div key={element.title} className="flex flex-col gap-2">
-                                        <h2 className="text-lg font-semibold">{element.title}</h2>
+                                        <h2 className="text-lg font-semibold flex items-center gap-2">
+                                            <element.icon className="h-5 w-5 text-blue-600" />
+                                            {element.title}
+                                        </h2>
                                         {element.items && (
                                             <ul className="grid gap-2">
                                                 {element.items.map((item) => (
-                                                    <li key={item.title}>
-                                                        <a href={item.href} className="block p-2 hover:bg-accent rounded-md">
-                                                            <div className="font-medium">{item.title}</div>
-                                                            <p className="text-sm text-muted-foreground">{item.description}</p>
-                                                        </a>
-                                                    </li>
+                                                    <ListItem
+                                                        key={item.title}
+                                                        title={item.title}
+                                                        description={item.description}
+                                                        href={item.href}
+                                                        icon={<item.icon className="h-4 w-4 text-muted-foreground" />} // Render item icon here
+                                                    />
                                                 ))}
                                             </ul>
                                         )}
@@ -161,6 +177,7 @@ export function Navbar() {
                                                     title={item.title}
                                                     description={item.description}
                                                     href={item.href}
+                                                    icon={<item.icon className="h-4 w-4 text-muted-foreground" />} // Render item icon here
                                                 />
                                             ))}
                                         </ul>
@@ -176,8 +193,6 @@ export function Navbar() {
                 </Button>
                 <ThemeModeToggle />
             </div>
-
         </nav>
     );
 }
-
